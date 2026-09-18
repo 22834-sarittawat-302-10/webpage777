@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarittawat Yotdechakit - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="preloader">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReT26x2Qsf2vgrX2iwU1pHzKJ4AzzcebeoSKG9KHyTcIUFEh_cTft8p9Q&s=10" alt="Loading">
+        <h2>Loading Magma...</h2>
+    </div>
+
+    <!-- Video Background -->
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/rTtMtX2B9ps?autoplay=1&mute=0&loop=1&playlist=rTtMtX2B9ps&controls=0&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <!-- Screen Fire Border -->
+    <div class="fire-border"></div>
+
+    <header>
+        <nav>
+            <div class="logo">Pangpond.</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>สวัสดีครับ ผม <span>ปังปอนด์</span></h1>
+            <h2>ศริตวรรธน์ ยศเดชากิตติ์</h2>
+            <p class="tagline">"นักเรียน ม.3 ที่หลงใหลในเทคโนโลยีและการออกแบบ"</p>
+            <div class="btn-group">
+                <a href="profile.html" class="btn primary-btn lava-drip">รู้จักฉันมากขึ้น</a>
+                <a href="hobby.html" class="btn secondary-btn lava-drip">ดูงานอดิเรกของฉัน</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper lava-drip">
+                <img src="https://www.khaosod.co.th/wpapp/uploads/2019/06/62216820_2484852834909243_7694992050374049792_n.jpg" alt="รูปโปรไฟล์ของศริตวรรธน์">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sarittawat Yotdechakit | ม.3/2 | All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS สำหรับระบบโหลดหน้าเว็บและระเบิดลาวาเมื่อคลิก -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('preloader').style.opacity = '0';
+                setTimeout(() => document.getElementById('preloader').style.display = 'none', 500);
+            }, 1500);
+        });
+
+        document.addEventListener('click', function(e) {
+            for(let i=0; i<10; i++) {
+                let spark = document.createElement('div');
+                spark.className = 'spark';
+                document.body.appendChild(spark);
+                spark.style.left = e.pageX + 'px';
+                spark.style.top = e.pageY + 'px';
+                let tx = (Math.random() - 0.5) * 200;
+                let ty = (Math.random() - 0.5) * 200;
+                spark.style.setProperty('--tx', `${tx}px`);
+                spark.style.setProperty('--ty', `${ty}px`);
+                setTimeout(() => spark.remove(), 600);
+            }
+        });
+    </script>
+</body>
+</html>
