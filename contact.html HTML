@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sarittawat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/rTtMtX2B9ps?autoplay=1&mute=0&loop=1&playlist=rTtMtX2B9ps&controls=0&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="fire-border"></div>
+
+    <header>
+        <nav>
+            <div class="logo">Pangpond.</div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html" class="active">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-section">
+        <h2 class="section-title">ช่องทางการติดต่อ</h2>
+        
+        <div class="contact-container glass-panel lava-drip">
+            <p class="cta-text">สามารถติดต่อหรือพูดคุยกับผมได้ตามช่องทางด้านล่างนี้ครับ</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div class="contact-info">
+                        <h4>Email</h4>
+                        <p>22834@chomthong.ac.th</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="contact-icon">📘</span>
+                    <div class="contact-info">
+                        <h4>Facebook</h4>
+                        <p>ศริตวรรธน์ ยศเดชากิตติ์</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">📸</span>
+                    <div class="contact-info">
+                        <h4>Instagram</h4>
+                        <p>pang.za</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <div class="contact-info">
+                        <h4>Line ID / TikTok</h4>
+                        <p>ศริตวรรธน์</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-action">
+                <a href="mailto:22834@chomthong.ac.th" class="btn primary-btn lava-drip">ส่งอีเมลหาฉัน</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sarittawat Yotdechakit | ม.3/2 | All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('click', function(e) {
+            for(let i=0; i<10; i++) {
+                let spark = document.createElement('div');
+                spark.className = 'spark';
+                document.body.appendChild(spark);
+                spark.style.left = e.pageX + 'px';
+                spark.style.top = e.pageY + 'px';
+                spark.style.setProperty('--tx', `${(Math.random() - 0.5) * 200}px`);
+                spark.style.setProperty('--ty', `${(Math.random() - 0.5) * 200}px`);
+                setTimeout(() => spark.remove(), 600);
+            }
+        });
+    </script>
+</body>
+</html>
